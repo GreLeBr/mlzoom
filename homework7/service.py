@@ -9,8 +9,8 @@ import typing
 from typing import TYPE_CHECKING
 from typing import Any
 
-model_ref = bentoml.sklearn.get("mlzoomcamp_homework:jsi67fslz6txydu5")
-# model_ref = bentoml.sklearn.get("mlzoomcamp_homework:qtzdz3slg6mwwdu5")
+# model_ref = bentoml.sklearn.get("mlzoomcamp_homework:jsi67fslz6txydu5")
+model_ref = bentoml.sklearn.get("mlzoomcamp_homework:qtzdz3slg6mwwdu5")
 # dv = model_ref.custom_objects['dictVectorizer']
 
 model_runner = model_ref.to_runner()
