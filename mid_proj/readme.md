@@ -4,7 +4,7 @@ I ran out of time and did not find a good dataset I like so I tried with this on
 
 The data I used is the open data regarding the bike sharing service **Bixi** available in Montréal Québec Canada. 
 
-The data I used as well as more is available at [Bixi open data](https://bixi.com/fr/donnees-ouvertes]
+The data I used as well as more is available at [Bixi open data](https://bixi.com/fr/donnees-ouvertes)
 
 
 1. Goal of the project:
@@ -25,12 +25,12 @@ The data I used as well as more is available at [Bixi open data](https://bixi.co
 
 4. Features engineering:
 
-  A very simple calculation of the distance between both station was made using an haversine function. 
-  A formulat to estimate shortest path by bike is in the notebook but it is not scaled to be executed on a high number of rows an I might try to incoporate it later. 
-  Using information of when a ride was initiated and decomposing it by hour of the day or seeing if the day of the week is impactful as people are less likely to commute over the week-end did not improve prediction. 
-  Since there are many combinations of departure-arrival stations, its high cardinality prevents it from being useful or useable. 
-  Using a shapefile of neighborhood in Montréal, I assigned the neighborhood to the departing station but this feature did not seem to have mnuch of any impacts either and was ignored. [shapefile](https://www.donneesquebec.ca/recherche/dataset/vmtl-quartiers)
-  Finally I downloaded historical weather data checking whether it is raining or not during the day the bike is borrowed or locked back. This feature did not help prediction either. Data is available here : [weather historical data](https://climate.weather.gc.ca/historical_data/search_historic_data_stations_e.html?StationID=48374&Month=8&Day=1&Year=2022&timeframe=3&StartYear=1840&EndYear=2020&type=bar&MeasTypeID=totprecip&wbdisable=true&searchType=stnProx&txtRadius=25&optProxType=navLink&txtLatDecDeg=45.466666666667&txtLongDecDeg=73.75&optLimit=specDate&selRowPerPage=25&station=MONTREAL%2FPIERRE+ELLIOTT+TRUDEAU+INTL+A#wb-cont)
+   A very simple calculation of the distance between both station was made using an haversine function. 
+   A formulat to estimate shortest path by bike is in the notebook but it is not scaled to be executed on a high number of rows an I might try to incoporate it later. 
+   Using information of when a ride was initiated and decomposing it by hour of the day or seeing if the day of the week is impactful as people are less likely to commute over the week-end did not improve prediction. 
+   Since there are many combinations of departure-arrival stations, its high cardinality prevents it from being useful or useable. 
+   Using a shapefile of neighborhood in Montréal, I assigned the neighborhood to the departing station but this feature did not seem to have mnuch of any impacts either and was ignored. [shapefile](https://www.donneesquebec.ca/recherche/dataset/vmtl-quartiers)
+   Finally I downloaded historical weather data checking whether it is raining or not during the day the bike is borrowed or locked back. This feature did not help prediction either. Data is available here : [weather historical data](https://climate.weather.gc.ca/historical_data/search_historic_data_stations_e.html?StationID=48374&Month=8&Day=1&Year=2022&timeframe=3&StartYear=1840&EndYear=2020&type=bar&MeasTypeID=totprecip&wbdisable=true&searchType=stnProx&txtRadius=25&optProxType=navLink&txtLatDecDeg=45.466666666667&txtLongDecDeg=73.75&optLimit=specDate&selRowPerPage=25&station=MONTREAL%2FPIERRE+ELLIOTT+TRUDEAU+INTL+A#wb-cont)
 
 5. Training:
 
@@ -66,5 +66,5 @@ The data I used as well as more is available at [Bixi open data](https://bixi.co
    heroku container:release web --app pet-pawpularity
     ```
     Example of the current api deploy at [my deployment](https://montreal-bikes.herokuapp.com/)
-    
+
     I might do frontend later if I have time sorry
