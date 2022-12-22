@@ -1,0 +1,6 @@
+*.csv
+*.Identifier
+*.pkl
+*.zip
+/MO_106
+/.ipynb_checkpoints
